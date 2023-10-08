@@ -39,6 +39,7 @@ export default function contadorReducer ( estado = estadoInicial , accion ) {
             }
         }
          default :
-         return estado
+         return estate
+         
     }
 }
