@@ -1,10 +1,16 @@
 import React from 'react' ;
 import { useDispatch, useSelector } from 'react-redux';
-import { reset, restarCinco, restarUno, sumarCinco, sumarUno } from '../actions/contadorAction';
+//import { reset, restarCinco, restarUno, sumarCinco, sumarUno } from '../actions/contadorAction';
+import { sumarUno , sumarCinco , restarUno , restarCinco , reset } from '../reducer/contadorSlice';
+
+
+
 
 const Contador = () => {
 
-    const estado = useSelector( (estado) => estado.contador )
+    //const estado = useSelector( (estado) => estado.contador )
+
+    const estado = useSelector((estado)=> estado.contador.contador)
 
     const dispatch = useDispatch() ;
 
@@ -14,13 +20,13 @@ const Contador = () => {
 
         <h2 className='text-center'> Contador Practica </h2>
 
-        <p className='text-4xl font-bold my-5 border-2 p-4 border-black'> { estado.contador } </p>
+        <p className='text-4xl font-bold my-5 border-2 p-4 border-black'> { estado } </p>
 
         <nav className='flex flex-row gap-8 mx-auto '>  
 
             <button 
                 className='p-4 bg-blue-500 text-white font-bold rounded-full'
-                onClick= {() => dispatch( restarCinco() )}
+                onClick= {() => dispatch( restarCinco(5) )}
                 > - 5 </button>
 
             <button 
@@ -34,7 +40,7 @@ const Contador = () => {
                      onClick= {() => dispatch( sumarUno() )}> + 1 </button>
 
             <button className='p-4 bg-blue-500 text-white font-bold rounded-full'
-                     onClick= {() => dispatch( sumarCinco() )}> + 5 </button>
+                     onClick= {() => dispatch( sumarCinco(5) )}> + 5 </button>
 
         </nav>
 

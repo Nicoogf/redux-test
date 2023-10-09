@@ -13,7 +13,7 @@ export const restarUno = () =>(
 )
 
 export const restarCinco = () => (
-    {type : RESTAR_CINCO , payload : 5 }
+    {type : RESTAR_CINCO , payload : -5 }
 )
 
 export const reset = () => (
