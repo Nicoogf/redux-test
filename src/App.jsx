@@ -1,6 +1,7 @@
 import { Provider } from 'react-redux';
 import './App.css' ;
 import { store } from './store';
+import Contador from './components/Contador';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
            <div>
             <h2 className='text-center bg-red-200 py-4  font-bold'>Contador</h2>
            </div>
+
+           <Contador />
 
       </Provider>
     </>
