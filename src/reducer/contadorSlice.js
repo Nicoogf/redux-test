@@ -28,4 +28,4 @@ export const counterSlice = createSlice({
 
 export const { sumarUno, sumarCinco, restarUno, restarCinco, reset } = counterSlice.actions;
 
-export default counterSlice.reducer; // Cambia "counterSlice" a "counterSlice.reducer"
+export default counterSlice; // Cambia "counterSlice" a "counterSlice.reducer"

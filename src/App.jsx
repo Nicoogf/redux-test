@@ -2,6 +2,7 @@ import { Provider } from 'react-redux';
 import './App.css' ;
 import { store } from './store';
 import Contador from './components/Contador';
+import Pokemon from './components/Pokemon';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
            </div>
 
            <Contador />
+
+           <hr />
+
+           <Pokemon />
 
       </Provider>
     </>
